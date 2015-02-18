@@ -21,7 +21,7 @@ module Crowdfund
     # config.i18n.default_locale = :de
 
     console do
-        ActiveRecord:Base.connection
+        ActiveRecord::Base.connection
     end
   end
 end
