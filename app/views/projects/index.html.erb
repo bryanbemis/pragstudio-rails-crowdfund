@@ -1,4 +1,4 @@
-<h1>Projects</h1>
+<h1><%= pluralize(@projects.size, "Project") %></h1>
 
 <% @projects.each do |project| %>
   <article>
@@ -6,7 +6,7 @@
       <h2><%= project.name %></h2>
     </header>
 
-    <p><%= project.description %></p>
+    <p><%= truncate(project.description, length: 150, separator: ' ') %></p>
 
     <table>
       <tr>
